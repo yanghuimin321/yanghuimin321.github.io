@@ -1,5 +1,6 @@
 ---
 title: boss直聘数据爬取以及简单数据分析
+typora-root-url: ./boss直聘数据爬取以及简单数据分析
 date: 2024-08-28 03:01:32
 tags:
 ---
@@ -22,7 +23,7 @@ tags:
 
 请求信息的时候，`cookie`中`zp_stoken`这个参数很重要，它就是反爬的关键参数。如果请求携带的`zp_stoken`不对，返回的数据只能是`您的访问行为异常`，如图
 
-![1724778713802.jpg](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/51a145e091a64ee2b793791ecee78f89~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgeWht:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiOTY0MTI3NTY2MjIwMzAifQ%3D%3D&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1727809283&x-orig-sign=GBHslkYja%2BSGJrP6TbHyjewp3%2BQ%3D)
+![图片](./pic0.png)
 
 而`zp_stoken`的生成，就是来源于上面请求返回的`zpData`中的`seed`和`ts`
 
@@ -30,13 +31,13 @@ tags:
 
 直接全局搜索`__zp_stoken__`，如图，可以发现`zp_stoken`生成调用的方法就是圈出的位置
 
-![1724772217677.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/af58a430cd7e495aa07d815703f612aa~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgeWht:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiOTY0MTI3NTY2MjIwMzAifQ%3D%3D&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1727809283&x-orig-sign=u01jvSTs7SI6pYjhJh7EvWwHSxY%3D)
+![图片](./pic1.png)
 
 接下来就是使用`rpc远程调用`，具体操作方法可以参考[js逆向之rpc远程调用](https://blog.csdn.net/weixin_51111267/article/details/130435642)
 
-![1724772535899.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/81fc1fab54af489b8ed8609f890ab0e6~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgeWht:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiOTY0MTI3NTY2MjIwMzAifQ%3D%3D&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1727809283&x-orig-sign=wWnR65USTlZqQLQZ%2FON8FRyb7kM%3D)
+![图片](./pic2.png)
 
-![1724772629843.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/cf9f71ea57424c13acec9e5ba97f8e5a~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgeWht:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiOTY0MTI3NTY2MjIwMzAifQ%3D%3D&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1727809283&x-orig-sign=uwlWCVp55Zc3IMfZR7haudrlFJI%3D)
+![图片](./pic3.png)
 
 浏览器注入`ws服务`如上，然后就是python开启调用ws服务，如下：
 
@@ -103,7 +104,7 @@ if __name__ == '__main__':
 
 调用效果如下：
 
-![1724773849259.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/0323be504e49436b9748a6c64f0dff0c~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgeWht:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiOTY0MTI3NTY2MjIwMzAifQ%3D%3D&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1727809283&x-orig-sign=d0VzgPT4%2BmmWT7oIuhjQRs%2Fd8CE%3D)
+![图片](./pic4.png)
 
 # 2. 请求封装和图形验证提示
 
@@ -250,17 +251,17 @@ def query_joblist(params, writer):
 
 个人实际体验爬取数据两千多条，大概花费可能2小时左右，触发图形验证频率，还算能接受，具体的爬取效果如下：
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/f3e7ef9ad01749b0b676c217e181d674~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgeWht:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiOTY0MTI3NTY2MjIwMzAifQ%3D%3D&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1727809283&x-orig-sign=7v1EGuuWL6bgeSVyhezwJy6tZYQ%3D)
+![图片](./pic5.png)
 
 爬取完成生成文件效果：
 
-![1724775768327.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/b9331bf8b74e47d998319c147b7616da~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgeWht:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiOTY0MTI3NTY2MjIwMzAifQ%3D%3D&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1727809283&x-orig-sign=EaL6fQm%2BYtxKk8Mdk%2Fkf7W8bfB0%3D)
+![图片](./pic6.png)
 
 # 5. 数据分析
 
 前面爬取的数据都是直接存入`csv文件`中，如果对数据进行进一步处理，存入到`数据库`中（可选），就可以用这些数据进行简单的`数据分析`啦，如图是我用爬取的数据做的一些简单的数据分析（不知为啥好大一部分爬取的岗位数据活跃度不高耶，半年前活跃？）
 
-![仪表板 1.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/61e87ff9d9c64ceb9c3956d88ba6e690~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgeWht:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiOTY0MTI3NTY2MjIwMzAifQ%3D%3D&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1727809283&x-orig-sign=BOiHEbUULdDSQ59Smw7ceOivLwU%3D)
+![图片](./pic7.png)
 
 ***
 

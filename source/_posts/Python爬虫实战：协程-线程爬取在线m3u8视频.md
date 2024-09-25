@@ -1,5 +1,6 @@
 ---
 title: Python爬虫实战：协程+线程爬取在线m3u8视频
+typora-root-url: ./Python爬虫实战：协程+线程爬取在线m3u8视频
 date: 2024-08-27 02:59:20
 tags:
 ---
@@ -16,33 +17,33 @@ tags:
 
 打开随便一部片子详情页，如下图，发现路径由 `域名+/tv/+片子id组成`
 
-![1724748888705.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/9bb196f544494168b92a739bbfc17d7d~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgeWht:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiOTY0MTI3NTY2MjIwMzAifQ%3D%3D&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1727809185&x-orig-sign=R4x3SLGeVlPyoS%2BIi0YhDEXospg%3D)
+![图片](./pic0.png)
 
 `f12`查看请求信息发现它返回一个`html文件`，其中引入了一个`js文件`
 
-![1724750202552.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/79889de92d5043d282868f0dd9676f2e~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgeWht:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiOTY0MTI3NTY2MjIwMzAifQ%3D%3D&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1727809185&x-orig-sign=QDGcpl%2FFQwLgTkjQkDlsvZyzTfo%3D)
+![图片](./pic1.png)
 
 继续查看请求的`js文件`内容，发现是一个`存放各种播放源、集数对应的m3u8链接列表文件`
 
-![1724751240212.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/09f2e5d833e849ee9f9df179aca8e761~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgeWht:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiOTY0MTI3NTY2MjIwMzAifQ%3D%3D&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1727809185&x-orig-sign=ewJpxq4CyQ%2BrHaStWhmN9R7AaPA%3D)
+![图片](./pic2.png)
 
 **那么现在，我们就知道通过片子id、播放源、集数获取对应的m3u8文件的逻辑了**：先通过 `域名+/tv/+片子id` 获取详情页的`html文件`，然后找到引入的`js文件路径`，请求js文件，通过查找播放源、集数，就能匹配到对应的`m3u8文件请求路径`啦
 
 这样就完啦？以网站中`良子线`为例，我们请求看看上面对应的m3u8文件路径，如图，发现根本没有想象中的那些ts文件路径，这是因为真正的m3u8文件路径，其实是包含在这个文件中，即图片中圈住的内容
 
-![1724751538215.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/0c68075f57b24b2abe49eb8847237bbb~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgeWht:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiOTY0MTI3NTY2MjIwMzAifQ%3D%3D&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1727809185&x-orig-sign=%2ByQ5A6e%2FIJYGYxIi5RQA0hrdcIE%3D)
+![图片](./pic3.png)
 
-![1724752069360.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/30d985e696b14fc4896bc828fe7ce043~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgeWht:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiOTY0MTI3NTY2MjIwMzAifQ%3D%3D&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1727809185&x-orig-sign=pRHAROiGqx%2FlfNMOd%2BsCxZAFb4o%3D)
+![图片](./pic4.png)
 
 所以对于有些播放源，我们得进行**二次处理获取真正的m3u8文件源**
 
 获取到真正的m3u8文件后，我们要做的就是`拼接ts请求路径`，发起请求把ts文件都请求下来即可；但是下载下来的ts文件都能直接播放？不不不，有些播放源，偷偷给你做了点小处理
 
-![1724752878255.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/8a827e00785e433dbfad4837fc103deb~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgeWht:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiOTY0MTI3NTY2MjIwMzAifQ%3D%3D&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1727809185&x-orig-sign=iXyFMtFCel2JdZEWBT2MWLALnxo%3D)
+![图片](./pic5.png)
 
 如上，有些播放源对ts文件是做了**加密**的，想要获得能直接播放的ts文件，还得先进行解密操作；一般都是`AES`加密，获取到解密需要的`key`和`iv`值即可，其中`key`值，是需要根据**URI拼接请求路径**获取到真正的`key`值的，如图
 
-![1724760670767.jpg](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/471041aaad6944b18fb2e291b71e008b~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgeWht:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiOTY0MTI3NTY2MjIwMzAifQ%3D%3D&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1727809185&x-orig-sign=F1El3YB7ALLNKPV7u8Ux3qZrgtM%3D)
+![图片](./pic6.png)
 
 这下，我们终于能获得一堆能直接播放的ts文件啦，但是实际上都是很短的片段，想要看完整内容，还得把ts文件都合并成一个完整的，可以使用`FFmpeg`来进行合并操作，甚至是后续将`ts文件`转为`mp4格式文件`
 
@@ -299,19 +300,19 @@ if __name__ == '__main__':
 
 程序运行效果：
 
-![1724759070690.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/4436cafe4d51402c96d1bd35bf9ccf84~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgeWht:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiOTY0MTI3NTY2MjIwMzAifQ%3D%3D&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1727809185&x-orig-sign=cuw%2FEhrD8iddybmnOMwXPjEb%2BZs%3D)
+![图片](./pic7.png)
 
 运行时下载的ts片段文件如图：
 
-![1724759274992.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/aa71f8f361a2480ea08fe7763260435a~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgeWht:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiOTY0MTI3NTY2MjIwMzAifQ%3D%3D&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1727809185&x-orig-sign=tNa65OgLRb8Wy0IBAnC2D6fAJzc%3D)
+![图片](./pic8.png)
 
 下载完成执行完合并和转格式操作后：
 
-![1724759806562.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/02708c256423477cac9073f7ec9bfc26~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgeWht:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiOTY0MTI3NTY2MjIwMzAifQ%3D%3D&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1727809185&x-orig-sign=D%2Fnr73%2BafFMLTMWiX4jtkUoNWFs%3D)
+![图片](./pic9.png)
 
 正常播放：
 
-![1724759879209.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/7c6e0dbd6ea5404e81b5e69e08c1a7fc~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgeWht:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiOTY0MTI3NTY2MjIwMzAifQ%3D%3D&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1727809185&x-orig-sign=Iey9zclET3Sm0oSvV5YL6bRlZfE%3D)
+![图片](./pic10.png)
 
 ***
 

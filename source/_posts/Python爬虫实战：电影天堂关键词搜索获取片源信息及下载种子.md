@@ -1,5 +1,6 @@
 ---
 title: Python爬虫实战：电影天堂关键词搜索获取片源信息及下载种子
+typora-root-url: ./Python爬虫实战：电影天堂关键词搜索获取片源信息及下载种子
 date: 2024-08-27 21:10:59
 tags:
 ---
@@ -16,19 +17,19 @@ tags:
 
 首先获取搜索的请求链接，查看请求参数
 
-![1724667808952.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/f928ec7f348d40489284ce357e2c5be8~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgeWht:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiOTY0MTI3NTY2MjIwMzAifQ%3D%3D&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1727787942&x-orig-sign=uhLL6bKLliv%2F4%2FCTm6A9iBJHw0Y%3D)
+![图片](./pic0.png)
 
 多进行几次请求，发现除了`keyboard`参数，其他的参数每次都是固定的，可知`keyboard`即为我们输入的搜索关键字转码而来，这里使用的是`gb2312`编码的方式
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/a87d156476e241d6bb522ec4e15ca478~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgeWht:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiOTY0MTI3NTY2MjIwMzAifQ%3D%3D&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1727787942&x-orig-sign=ItXyocF3kdDaRF%2Bp34YlZz5vO1E%3D)
+![图片](./pic1.png)
 
 搜索请求返回一个`html文件`数据，我们采用`BeautifulSoup`来进行数据提取，获取`片源信息`以及`详情页的链接`
 
-![1724668618330.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/4a30f2c152e54dc48fea7b1e255705c4~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgeWht:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiOTY0MTI3NTY2MjIwMzAifQ%3D%3D&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1727787942&x-orig-sign=mdtZwIvjXYASRb22gARFBucoYqw%3D)
+![图片](./pic2.png)
 
 点击进入详情页，发现详情页的页面地址就等于：`域名+上面的链接`
 
-![image.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/701029907bba40f1a8dbf3ae8bb32184~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgeWht:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiOTY0MTI3NTY2MjIwMzAifQ%3D%3D&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1727787942&x-orig-sign=xszM8yBO4%2BvhE7rYDVsSNCm7dfw%3D)
+![图片](./pic3.png)
 
 我们再对每个片源的详情页进行访问，用BeautifulSoup提取出对应的下载种子即可
 
@@ -36,7 +37,7 @@ tags:
 
 如果直接用`requests`库直接对网页进行请求，每次返回都是
 
-![1724669340475.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/0f3d052fb9844c469cc742571e320617~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgeWht:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiOTY0MTI3NTY2MjIwMzAifQ%3D%3D&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1727787942&x-orig-sign=FImVw4RCjmj0GsfmuK6bT629xwA%3D)
+![图片](./pic4.png)
 
 这是因为网站有做反爬，具体的解决方法可以参考[破解反爬虫策略 /\_guard/auto.js（一） 原理](https://blog.csdn.net/cjc000/article/details/140476371)
 
@@ -271,11 +272,11 @@ if __name__ == '__main__':
 
 启动程序，爬虫顺利运行，下面是运行效果：
 
-![1724691318451.jpg](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/683f6cb4da684e869f1d27056d851985~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgeWht:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiOTY0MTI3NTY2MjIwMzAifQ%3D%3D&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1727787942&x-orig-sign=wTUh4Ftl7puYOKuCRj9gBoyCIeY%3D)
+![图片](./pic5.png)
 
 爬取数据也顺利保存进本地csv文件
 
-![1724689635335.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/8737ec3960da458796915b9216a30777~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgeWht:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiOTY0MTI3NTY2MjIwMzAifQ%3D%3D&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1727787942&x-orig-sign=AHn6EWC0YU3EqeqFxBQSAbm7a7o%3D)
+![图片](./pic6.png)
 
 ***
 

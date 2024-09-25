@@ -1,6 +1,6 @@
 ---
-title: Python爬虫实战：协程+线程爬取在线m3u8视频
-typora-root-url: ./Python爬虫实战：协程+线程爬取在线m3u8视频
+title: Python爬虫实战：协程-线程爬取在线m3u8视频
+typora-root-url: ./Python爬虫实战：协程-线程爬取在线m3u8视频
 date: 2024-08-27 02:59:20
 tags:
 ---

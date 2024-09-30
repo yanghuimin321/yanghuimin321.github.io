@@ -3,6 +3,11 @@ title: Python爬虫实战：电影天堂关键词搜索获取片源信息及下�
 typora-root-url: ./Python爬虫实战：电影天堂关键词搜索获取片源信息及下载种子
 date: 2024-08-27 21:10:59
 tags:
+    - python
+    - 爬虫
+categories: 
+    - 实战
+description: 根据设置的搜索关键字，爬取电影天堂对应片源信息及下载地址的数据，生成csv文件
 ---
 
 根据学习的[爬虫视频](https://www.bilibili.com/video/BV1uN4y1W7Du?p=25\&vd_source=95f31f606414d946786c34f2feac0a92)实战项目，进行的扩展实战

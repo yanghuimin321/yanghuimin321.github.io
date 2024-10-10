@@ -1,13 +1,14 @@
 ---
 title: Python爬虫实战：协程-线程爬取在线m3u8视频
 typora-root-url: ./Python爬虫实战：协程-线程爬取在线m3u8视频
-date: 2024-08-27 02:59:20
 tags:
-    - python
-    - 爬虫
-categories: 
-    - 实战
+  - python
+  - 爬虫
+categories:
+  - 实战
 description: 根据片源id，爬取飞极速网站上的视频文件，并转化为mp4文件
+abbrlink: fa77dff4
+date: 2024-08-27 02:59:20
 ---
 
 根据学习的[爬虫视频](https://www.bilibili.com/video/BV1uN4y1W7Du?p=68\&vd_source=95f31f606414d946786c34f2feac0a92)实战项目，进行的扩展实战

@@ -1,14 +1,15 @@
 ---
 title: boss直聘数据爬取以及简单数据分析
 typora-root-url: ./boss直聘数据爬取以及简单数据分析
-date: 2024-08-28 03:01:32
 tags:
-    - python
-    - 爬虫
-    - 数据分析
-categories: 
-    - 实战
+  - python
+  - 爬虫
+  - 数据分析
+categories:
+  - 实战
 description: 爬取boss网页数据，并对数据进行存储，使用tableau进行简单数据分析
+abbrlink: 3d5404dc
+date: 2024-08-28 03:01:32
 ---
 
 最近面临找工作，想看看现在深圳前端招聘环境怎么样，想着写个爬虫获取一下boss上面的前端岗位招聘信息，然后做一个简单的数据分析

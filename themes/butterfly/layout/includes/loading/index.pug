@@ -1,5 +1,9 @@
 if theme.preloader.enable
   if theme.preloader.source === 1
     include ./fullpage-loading.pug
+  //- 用于替换页面加载动画
+  else if theme.preloader.source === 3
+    include ./custom-loading.pug
+  //- 用于替换页面加载动画
   else
     include ./pace.pug

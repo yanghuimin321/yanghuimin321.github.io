@@ -17,7 +17,9 @@ if !theme.disable_top_img && page.top_img !== false
     - top_img = theme.category_per_img && theme.category_per_img[page.category]
     - top_img = top_img || returnTopImg(theme.category_img)
   else if is_home()
-    - top_img = returnTopImg(theme.index_img)
+    //- 用于将首页顶图换为视频前，不展示yml里配置的顶图
+    - top_img = ''
+    //- - top_img = returnTopImg(theme.index_img)
   else if is_archive()
     - top_img = returnTopImg(theme.archive_img)
   else
@@ -33,6 +35,8 @@ header#page-header(class=`${headerClassName + isFixedClass}` style=bg_img)
     if is_post()
       include ./post-info.pug
     else if is_home()
+      //- 用于将首页顶图换为视频
+      video(src='/assets/images/index_img.mp4' autoplay="" loop="" muted="" style='min-height:100%;height:100%;width:100%;object-fit:cover')
       #site-info
         h1#site-title=config.title
         if theme.subtitle.enable

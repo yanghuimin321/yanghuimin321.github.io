@@ -9,13 +9,6 @@ script.
     restartOnPushState: false
   }
 
-  btf.addGlobalFn('pjaxSend', () => {
-    Pace.restart()
-    if (!{theme.pjax && theme.pjax.enable}){
-        preloader.initLoading()
-    }
-  }, 'pace_restart')
-
 link(rel="stylesheet", href=url_for(theme.preloader.pace_css_url || theme.asset.pace_default_css))
 script(src=url_for(theme.asset.pace_js))
 
@@ -38,8 +31,12 @@ script.
     //- pace进度条结束后再关闭loading
     Pace.on('done', preloader.endLoading)
 
-    if (!{theme.pjax && theme.pjax.enable}) {
-      btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
-    } 
-
+    btf.addGlobalFn('pjaxSend', () => {
+        Pace.restart()
+        if (!{theme.pjax && theme.pjax.enable}){
+            preloader.initLoading()
+        }
+    }, 'pace_restart')
   })()
+
+  

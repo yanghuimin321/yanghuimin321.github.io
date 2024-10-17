@@ -1,0 +1,60 @@
+{
+    "Type": "Live2D Expression",
+    "Parameters": [
+        {
+            "Id": "Han",
+            "Value": 0.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "Lamian",
+            "Value": 0.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "Kun",
+            "Value": 0.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "Shock",
+            "Value": 1.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "Happy",
+            "Value": 0.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "Cry",
+            "Value": 0.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "EatMouth",
+            "Value": 0.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "ParamMouthForm",
+            "Value": -1.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "ParamMouthOpenY",
+            "Value": 1.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "ParamBrowRY",
+            "Value": 1.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "ParamBrowLY",
+            "Value": 1.0,
+            "Blend": "Add"
+        }
+    ]
+}

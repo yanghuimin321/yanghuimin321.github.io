@@ -1,0 +1,50 @@
+{
+    "Type": "Live2D Expression",
+    "Parameters": [
+        {
+            "Id": "NMouth",
+            "Value": -1.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "Han",
+            "Value": 0.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "StarEyes",
+            "Value": 0.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "HaQian",
+            "Value": 0.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "Kun",
+            "Value": 0.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "Shock",
+            "Value": 0.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "Happy",
+            "Value": 0.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "Cry",
+            "Value": 1.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "EatMouth",
+            "Value": 0.0,
+            "Blend": "Add"
+        }
+    ]
+}

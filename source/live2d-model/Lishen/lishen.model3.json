@@ -1,0 +1,167 @@
+{
+  "Version": 3,
+  "Type": 0,
+  "FileReferences": {
+    "Moc": "LIshen.moc3",
+    "Textures": [
+      "LIshen.8192/texture_00.png"
+    ],
+    "Physics": "LIshen.physics3.json",
+    "PhysicsV2": {
+      "File": "LIshen.physics3.json"
+    },
+    "Motions": {
+      "1": [
+        {
+          "Name": "困",
+          "Expression": "动作表情 困"
+        },
+        {
+          "Name": "发啾啾",
+          "Expression": "配饰 发啾啾"
+        }
+      ]
+    },
+    "Expressions": [
+      {
+        "Name": "动作 蛋糕",
+        "File": "P-Cake.exp3.json"
+      },
+      {
+        "Name": "动作 甜甜圈",
+        "File": "P-TianTianQuan.exp3.json"
+      },
+      {
+        "Name": "动作 奶茶",
+        "File": "P-NaiCha.exp3.json"
+      },
+      {
+        "Name": "动作 梨子抱枕",
+        "File": "P-BaoZhen.exp3.json"
+      },
+      {
+        "Name": "动作-哭",
+        "File": "P-kuku.exp3.json"
+      },
+      {
+        "Name": "动作 胡萝卜",
+        "File": "P-HuLuoBo.exp3.json"
+      },
+      {
+        "Name": "动作 马卡龙",
+        "File": "P-MaKaLong.exp3.json"
+      },
+      {
+        "Name": "动作 咖啡",
+        "File": "P-KaFei.exp3.json"
+      },
+      {
+        "Name": "动作 猫爪",
+        "File": "P-MaoMao.exp3.json"
+      },
+      {
+        "Name": "配饰 发啾啾",
+        "File": "A-FaJiuJiu.exp3.json"
+      },
+      {
+        "Name": "配饰-梨子把",
+        "File": "A-LiZiBa.exp3.json"
+      },
+      {
+        "Name": "配饰-雪人头套",
+        "File": "A-Snow.exp3.json"
+      },
+      {
+        "Name": "配饰-摸摸",
+        "File": "A-MoMo.exp3.json"
+      },
+      {
+        "Name": "配饰 墨镜",
+        "File": "A-MoJing.exp3.json"
+      },
+      {
+        "Name": "动作表情 困",
+        "File": "P-Kun.exp3.json"
+      },
+      {
+        "Name": "表情 高兴花花",
+        "File": "E-Happy.exp3.json"
+      },
+      {
+        "Name": "表情 惊讶",
+        "File": "E-Shock.exp3.json"
+      },
+      {
+        "Name": "表情 害羞",
+        "File": "E-Shy.exp3.json"
+      }
+    ]
+  },
+  "Controllers": {
+    "ParamHit": {},
+    "ParamLoop": {
+      "Items": [
+        {
+          "Ids": [
+            ""
+          ],
+          "Type": 0
+        }
+      ]
+    },
+    "KeyTrigger": {
+      "Items": [
+        {
+          "Input": 49,
+          "DownMtn": "1:困"
+        },
+        {
+          "Input": 50,
+          "DownMtn": "1:发啾啾"
+        }
+      ],
+      "Enabled": true
+    },
+    "ParamTrigger": {},
+    "AreaTrigger": {},
+    "HandTrigger": {},
+    "EyeBlink": {
+      "MinInterval": 500,
+      "MaxInterval": 6000,
+      "Enabled": true
+    },
+    "LipSync": {
+      "Gain": 5.0
+    },
+    "MouseTracking": {
+      "SmoothTime": 0.15,
+      "Enabled": true
+    },
+    "AutoBreath": {
+      "Enabled": true
+    },
+    "ExtraMotion": {
+      "Enabled": true
+    },
+    "Accelerometer": {
+      "Enabled": true
+    },
+    "Microphone": {},
+    "Transform": {},
+    "FaceTracking": {
+      "Enabled": true
+    },
+    "HandTracking": {},
+    "ParamValue": {},
+    "PartOpacity": {},
+    "ArtmeshOpacity": {},
+    "ArtmeshColor": {},
+    "ArtmeshCulling": {
+      "DefaultMode": 0
+    },
+    "IntimacySystem": {}
+  },
+  "Options": {
+    "TexType": 0
+  }
+}

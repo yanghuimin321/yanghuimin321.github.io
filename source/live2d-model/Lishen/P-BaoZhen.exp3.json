@@ -1,0 +1,30 @@
+{
+	"Type": "Live2D Expression",
+	"Parameters": [
+		{
+			"Id": "Cake",
+			"Value": 0,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Donut",
+			"Value": 0,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Pillow",
+			"Value": 1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Cry",
+			"Value": 0,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Cat",
+			"Value": 0,
+			"Blend": "Add"
+		}
+	]
+}

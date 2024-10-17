@@ -1,0 +1,55 @@
+{
+    "Type": "Live2D Expression",
+    "Parameters": [
+        {
+            "Id": "NArmR",
+            "Value": -1.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "NMouth",
+            "Value": -1.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "CatCard",
+            "Value": 0.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "Lamian",
+            "Value": 0.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "HaQian",
+            "Value": 1.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "DaCall",
+            "Value": 0.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "CatPaw",
+            "Value": 0.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "MeatHand",
+            "Value": 0.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "EatMouth",
+            "Value": 0.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "NArmL",
+            "Value": 0.0,
+            "Blend": "Add"
+        }
+    ]
+}

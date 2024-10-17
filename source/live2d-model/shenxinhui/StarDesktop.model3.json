@@ -1,0 +1,168 @@
+{
+  "Version": 3,
+  "Type": 0,
+  "FileReferences": {
+    "Moc": "StarDesktop.moc3",
+    "Textures": [
+      "StarDesktop.4096/texture_00.png"
+    ],
+    "Physics": "StarDesktop.physics3.json",
+    "PhysicsV2": {
+      "File": "StarDesktop.physics3.json"
+    },
+    "Motions": {
+      "idle": [
+        {
+          "Name": "idle",
+          "File": "expressions/Idle.motion3.json"
+        }
+      ],
+      "wink": [
+        {
+          "Name": "wink",
+          "File": "expressions/Wink.motion3.json"
+        }
+      ]
+    },
+    "Expressions": [
+      {
+        "Name": "正常",
+        "File": "expressions/正常.exp3.json"
+      },
+      {
+        "Name": "配饰-星星头套",
+        "File": "expressions/配饰-星星头套.exp3.json"
+      },
+      {
+        "Name": "配饰-花环",
+        "File": "expressions/配饰-花环.exp3.json"
+      },
+      {
+        "Name": "配饰-啾啾",
+        "File": "expressions/配饰-啾啾.exp3.json"
+      },
+      {
+        "Name": "配饰-摸头",
+        "File": "expressions/配饰-摸头.exp3.json"
+      },
+      {
+        "Name": "表情-脸红",
+        "File": "expressions/表情-脸红.exp3.json"
+      },
+      {
+        "Name": "表情-汗流浃背",
+        "File": "expressions/表情-汗流浃背.exp3.json"
+      },
+      {
+        "Name": "表情-星星",
+        "File": "expressions/表情-星星.exp3.json"
+      },
+      {
+        "Name": "表情-惊讶",
+        "File": "expressions/表情-惊讶（桌宠）.exp3.json"
+      },
+      {
+        "Name": "表情-开心",
+        "File": "expressions/表情-开心.exp3.json"
+      },
+      {
+        "Name": "表情-困",
+        "File": "expressions/表情-困（桌宠）.exp3.json"
+      },
+      {
+        "Name": "表情-哭",
+        "File": "expressions/表情-哭.exp3.json"
+      },
+      {
+        "Name": "动作-猫猫牌",
+        "File": "expressions/动作-猫猫牌.exp3.json"
+      },
+      {
+        "Name": "动作-猫爪",
+        "File": "expressions/动作-猫爪.exp3.json"
+      },
+      {
+        "Name": "动作-星星抱枕",
+        "File": "expressions/动作-星星抱枕.exp3.json"
+      },
+      {
+        "Name": "动作-打Call",
+        "File": "expressions/动作-打Call.exp3.json"
+      },
+      {
+        "Name": "动作-哈欠",
+        "File": "expressions/动作-哈欠.exp3.json"
+      },
+      {
+        "Name": "动作-吃肉肉",
+        "File": "expressions/动作-吃肉肉.exp3.json"
+      },
+      {
+        "Name": "动作-吃拉面",
+        "File": "expressions/动作-吃拉面.exp3.json"
+      },
+      {
+        "Name": "Wink.motion3",
+        "File": "expressions/Wink.motion3.json"
+      }
+    ]
+  },
+  "Controllers": {
+    "ParamHit": {},
+    "ParamLoop": {},
+    "KeyTrigger": {},
+    "ParamTrigger": {},
+    "AreaTrigger": {},
+    "HandTrigger": {},
+    "EyeBlink": {
+      "MinInterval": 500,
+      "MaxInterval": 6000,
+      "Enabled": true
+    },
+    "LipSync": {
+      "Gain": 5.0
+    },
+    "MouseTracking": {
+      "SmoothTime": 0.15,
+      "Enabled": true
+    },
+    "AutoBreath": {
+      "Enabled": true
+    },
+    "ExtraMotion": {
+      "Enabled": true
+    },
+    "Accelerometer": {
+      "Enabled": true
+    },
+    "Microphone": {},
+    "Transform": {},
+    "FaceTracking": {
+      "Enabled": true
+    },
+    "HandTracking": {},
+    "ParamValue": {},
+    "PartOpacity": {},
+    "ArtmeshOpacity": {},
+    "ArtmeshColor": {},
+    "ArtmeshCulling": {
+      "DefaultMode": 0
+    },
+    "IntimacySystem": {}
+  },
+  "HitAreas": [
+    {
+      "Name": "wink",
+      "Id": "ArtMesh64",
+      "Motion": "wink"
+    },
+    {
+      "Name": "idle",
+      "Id": "ArtMesh105",
+      "Motion": "idle"
+    }
+  ],
+  "Options": {
+    "TexType": 0
+  }
+}

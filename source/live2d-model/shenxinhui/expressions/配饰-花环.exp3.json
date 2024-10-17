@@ -1,0 +1,45 @@
+{
+    "Type": "Live2D Expression",
+    "Parameters": [
+        {
+            "Id": "NArmL",
+            "Value": -1.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "Flower",
+            "Value": 1.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "CatCard",
+            "Value": 0.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "Lamian",
+            "Value": 0.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "DaCall",
+            "Value": 0.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "CatPaw",
+            "Value": 0.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "Pillow",
+            "Value": 0.0,
+            "Blend": "Add"
+        },
+        {
+            "Id": "MeatHand",
+            "Value": 0.0,
+            "Blend": "Add"
+        }
+    ]
+}

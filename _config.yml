@@ -44,6 +44,7 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+  - live2d-mode/**
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -125,3 +126,61 @@ deploy:
 aplayer:
   meting: true
   asset_inject: false
+
+
+OhMyLive2d:
+  enable: true
+  CDN: https://registry.npmmirror.com/oh-my-live2d/latest/files
+  option:
+    dockedPosition: right
+    mobileDisplay: true # 是否在移动端显示
+    parentElement: document.body #为组件提供一个父元素，如果未指定则默认挂载到 body 中
+    primaryColor: 'var(--btn-bg)' # 主题色 支持变量
+    sayHello: false # 是否在初始化阶段打印项目信息
+    statusBar:
+      restMessage: 看板郎休息中
+    menus:
+      items: |
+        (defaultItems)=>{
+         return [
+           defaultItems[0],
+           {
+              id: 'SwitchExpression',
+              icon: 'icon-like',
+              title: '切换表情',
+              onClick: (oml2d)=>{
+                oml2d['models'].model.internalModel.motionManager.expressionManager.setRandomExpression();
+              }
+           },
+           defaultItems[1],
+           defaultItems[2]
+         ]
+        }   
+    models:
+      - name: shenxinhui
+        path: /live2d-model/shenxinhui/starDesktop.model3.json
+        position: [0, 30]
+        mobilePosition: [0, 20]
+        mobileScale: 0.07
+      - name: lishen
+        path: /live2d-model/Lishen/lishen.model3.json
+        position: [0, 30]
+        mobilePosition: [0, 20]
+        mobileScale: 0.07
+    tips:
+      style:
+        width: 230
+        height: 120
+        left: calc(50% - 20px)
+        top: -60px
+      mobileStyle:
+        width: 180
+        height: 80
+        left: calc(50% - 30px)
+        top: -60px
+      idleTips:
+        interval: 15000
+        wordTheDay: |
+          function(wordTheDayData){
+            return `${wordTheDayData.hitokoto}    by.${wordTheDayData.from}`;
+          }

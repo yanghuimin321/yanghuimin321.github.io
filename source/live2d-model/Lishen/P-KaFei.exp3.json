@@ -1,0 +1,45 @@
+{
+	"Type": "Live2D Expression",
+	"Parameters": [
+		{
+			"Id": "Cafe",
+			"Value": 1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Cat",
+			"Value": 0,
+			"Blend": "Add"
+		},
+		{
+			"Id": "MKL",
+			"Value": 0,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Carrot",
+			"Value": 0,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Cry",
+			"Value": 0,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Milk",
+			"Value": 0,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Donut",
+			"Value": 0,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Cake",
+			"Value": 0,
+			"Blend": "Add"
+		}
+	]
+}

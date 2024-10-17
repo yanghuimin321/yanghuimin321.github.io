@@ -1,0 +1,1057 @@
+{
+	"Version": 3,
+	"Parameters": [
+		{
+			"Id": "ParamBreath",
+			"GroupId": "",
+			"Name": "呼吸"
+		},
+		{
+			"Id": "ParamLineHead",
+			"GroupId": "ParamGroup4",
+			"Name": "▄▄▄[HEAD]▄▄▄"
+		},
+		{
+			"Id": "ParamAngleX",
+			"GroupId": "ParamGroup4",
+			"Name": "鼠标X 头X"
+		},
+		{
+			"Id": "ParamAngleZ",
+			"GroupId": "ParamGroup4",
+			"Name": "鼠标X 头Z"
+		},
+		{
+			"Id": "ParamAngleY",
+			"GroupId": "ParamGroup4",
+			"Name": "鼠标Y 头Y"
+		},
+		{
+			"Id": "ParamLineBody",
+			"GroupId": "ParamGroup4",
+			"Name": "▄▄▄[Body]▄▄▄"
+		},
+		{
+			"Id": "ParamBodyAngleX",
+			"GroupId": "ParamGroup4",
+			"Name": "鼠标X  体X"
+		},
+		{
+			"Id": "ParamBodyAngleY",
+			"GroupId": "ParamGroup4",
+			"Name": "鼠标Y  体Y"
+		},
+		{
+			"Id": "ParamBodyAngleZ",
+			"GroupId": "ParamGroup4",
+			"Name": "鼠标X  体Z"
+		},
+		{
+			"Id": "NArmL",
+			"GroupId": "ParamGroup14",
+			"Name": "N手臂 L"
+		},
+		{
+			"Id": "NArmR",
+			"GroupId": "ParamGroup14",
+			"Name": "N手臂 R"
+		},
+		{
+			"Id": "NMouth",
+			"GroupId": "ParamGroup14",
+			"Name": "N嘴"
+		},
+		{
+			"Id": "Jiujiu",
+			"GroupId": "ParamGroup14",
+			"Name": "啾啾"
+		},
+		{
+			"Id": "Flower",
+			"GroupId": "ParamGroup14",
+			"Name": "花环"
+		},
+		{
+			"Id": "StarHat",
+			"GroupId": "ParamGroup14",
+			"Name": "星星头套"
+		},
+		{
+			"Id": "CatCard",
+			"GroupId": "ParamGroup14",
+			"Name": "猫猫牌"
+		},
+		{
+			"Id": "Han",
+			"GroupId": "ParamGroup14",
+			"Name": "汗流浃背"
+		},
+		{
+			"Id": "Lamian",
+			"GroupId": "ParamGroup14",
+			"Name": "吃拉面"
+		},
+		{
+			"Id": "StarEyes",
+			"GroupId": "ParamGroup14",
+			"Name": "星星"
+		},
+		{
+			"Id": "Shy",
+			"GroupId": "ParamGroup14",
+			"Name": "脸红"
+		},
+		{
+			"Id": "HaQian",
+			"GroupId": "ParamGroup14",
+			"Name": "哈欠"
+		},
+		{
+			"Id": "Momo",
+			"GroupId": "ParamGroup14",
+			"Name": "摸头"
+		},
+		{
+			"Id": "DaCall",
+			"GroupId": "ParamGroup14",
+			"Name": "打Call"
+		},
+		{
+			"Id": "CatPaw",
+			"GroupId": "ParamGroup14",
+			"Name": "猫爪"
+		},
+		{
+			"Id": "Pillow",
+			"GroupId": "ParamGroup14",
+			"Name": "星星抱枕"
+		},
+		{
+			"Id": "Kun",
+			"GroupId": "ParamGroup14",
+			"Name": "困"
+		},
+		{
+			"Id": "Shock",
+			"GroupId": "ParamGroup14",
+			"Name": "惊讶"
+		},
+		{
+			"Id": "Happy",
+			"GroupId": "ParamGroup14",
+			"Name": "开心"
+		},
+		{
+			"Id": "Cry",
+			"GroupId": "ParamGroup14",
+			"Name": "哭"
+		},
+		{
+			"Id": "MeatHand",
+			"GroupId": "ParamGroup14",
+			"Name": "啃肉手"
+		},
+		{
+			"Id": "EatMouth",
+			"GroupId": "ParamGroup14",
+			"Name": "吃肉 嘴"
+		},
+		{
+			"Id": "EatMeat",
+			"GroupId": "ParamGroup14",
+			"Name": "啃肉"
+		},
+		{
+			"Id": "ParamLineBody2",
+			"GroupId": "ParamGroup14",
+			"Name": "▄▄▄[动画参数]▄▄▄"
+		},
+		{
+			"Id": "Param63",
+			"GroupId": "ParamGroup14",
+			"Name": "肉 X"
+		},
+		{
+			"Id": "Param62",
+			"GroupId": "ParamGroup14",
+			"Name": "肉 Y"
+		},
+		{
+			"Id": "Param59",
+			"GroupId": "ParamGroup14",
+			"Name": "Wink"
+		},
+		{
+			"Id": "Param60",
+			"GroupId": "ParamGroup14",
+			"Name": "Wink on"
+		},
+		{
+			"Id": "Param57",
+			"GroupId": "ParamGroup14",
+			"Name": "流泪 R"
+		},
+		{
+			"Id": "Param58",
+			"GroupId": "ParamGroup14",
+			"Name": "流泪 L"
+		},
+		{
+			"Id": "Param52",
+			"GroupId": "ParamGroup14",
+			"Name": "泪光"
+		},
+		{
+			"Id": "Param53",
+			"GroupId": "ParamGroup14",
+			"Name": "眼眶泪 1"
+		},
+		{
+			"Id": "Param54",
+			"GroupId": "ParamGroup14",
+			"Name": "眼眶泪 2"
+		},
+		{
+			"Id": "Param48",
+			"GroupId": "ParamGroup14",
+			"Name": "花"
+		},
+		{
+			"Id": "Param24",
+			"GroupId": "ParamGroup14",
+			"Name": "猫爪捏捏"
+		},
+		{
+			"Id": "Param39",
+			"GroupId": "ParamGroup14",
+			"Name": "口水"
+		},
+		{
+			"Id": "Param43",
+			"GroupId": "ParamGroup14",
+			"Name": "口水M"
+		},
+		{
+			"Id": "Param44",
+			"GroupId": "ParamGroup14",
+			"Name": "Zzz"
+		},
+		{
+			"Id": "Param22",
+			"GroupId": "ParamGroup14",
+			"Name": "打call L1"
+		},
+		{
+			"Id": "Param21",
+			"GroupId": "ParamGroup14",
+			"Name": "打call L2"
+		},
+		{
+			"Id": "Param19",
+			"GroupId": "ParamGroup14",
+			"Name": "打call R1"
+		},
+		{
+			"Id": "Param18",
+			"GroupId": "ParamGroup14",
+			"Name": "打call R2"
+		},
+		{
+			"Id": "Param20",
+			"GroupId": "ParamGroup14",
+			"Name": "打call RY"
+		},
+		{
+			"Id": "Param16",
+			"GroupId": "ParamGroup14",
+			"Name": "摸头"
+		},
+		{
+			"Id": "Param10",
+			"GroupId": "ParamGroup14",
+			"Name": "哈欠 1"
+		},
+		{
+			"Id": "Param11",
+			"GroupId": "ParamGroup14",
+			"Name": "哈欠 M"
+		},
+		{
+			"Id": "Param35",
+			"GroupId": "ParamGroup14",
+			"Name": "星星 头套"
+		},
+		{
+			"Id": "Param37",
+			"GroupId": "ParamGroup14",
+			"Name": "星星"
+		},
+		{
+			"Id": "Param31",
+			"GroupId": "ParamGroup14",
+			"Name": "流汗 1 s"
+		},
+		{
+			"Id": "Param32",
+			"GroupId": "ParamGroup14",
+			"Name": "流汗 1 on"
+		},
+		{
+			"Id": "Param33",
+			"GroupId": "ParamGroup14",
+			"Name": "流汗 2 s"
+		},
+		{
+			"Id": "Param34",
+			"GroupId": "ParamGroup14",
+			"Name": "流汗 2 on"
+		},
+		{
+			"Id": "ParamLineEye2",
+			"GroupId": "ParamGroupExpression",
+			"Name": "▄▄▄[EYE]▄▄▄"
+		},
+		{
+			"Id": "ParamEyeROpen",
+			"GroupId": "ParamGroupExpression",
+			"Name": "右眼　开闭"
+		},
+		{
+			"Id": "ParamEyeLOpen",
+			"GroupId": "ParamGroupExpression",
+			"Name": "左眼　开闭"
+		},
+		{
+			"Id": "ParamEyeRSmile",
+			"GroupId": "ParamGroupExpression",
+			"Name": "右眼　微笑"
+		},
+		{
+			"Id": "ParamEyeLSmile",
+			"GroupId": "ParamGroupExpression",
+			"Name": "左眼　微笑"
+		},
+		{
+			"Id": "ParamEyeBallX",
+			"GroupId": "ParamGroupExpression",
+			"Name": "眼球　X"
+		},
+		{
+			"Id": "ParamEyeBallY",
+			"GroupId": "ParamGroupExpression",
+			"Name": "眼球　Y"
+		},
+		{
+			"Id": "ParamEyeForm",
+			"GroupId": "ParamGroupExpression",
+			"Name": "Emo"
+		},
+		{
+			"Id": "ParamEyeSize",
+			"GroupId": "ParamGroupExpression",
+			"Name": "Form"
+		},
+		{
+			"Id": "ParamLineEyebrown",
+			"GroupId": "ParamGroup2",
+			"Name": "▄▄▄[眉毛]▄▄▄"
+		},
+		{
+			"Id": "ParamBrowRY",
+			"GroupId": "ParamGroup2",
+			"Name": "右眉　上下"
+		},
+		{
+			"Id": "ParamBrowLY",
+			"GroupId": "ParamGroup2",
+			"Name": "左眉　上下"
+		},
+		{
+			"Id": "ParamBrowRForm",
+			"GroupId": "ParamGroup2",
+			"Name": "右眉　変形"
+		},
+		{
+			"Id": "ParamBrowLForm",
+			"GroupId": "ParamGroup2",
+			"Name": "左眉　変形"
+		},
+		{
+			"Id": "ParamLine20",
+			"GroupId": "ParamGroup24",
+			"Name": "▄▄▄[刘海]▄▄▄"
+		},
+		{
+			"Id": "Param168",
+			"GroupId": "ParamGroup24",
+			"Name": "刘海Y1"
+		},
+		{
+			"Id": "Param169",
+			"GroupId": "ParamGroup24",
+			"Name": "刘海Y2"
+		},
+		{
+			"Id": "Param170",
+			"GroupId": "ParamGroup24",
+			"Name": "刘海Y3"
+		},
+		{
+			"Id": "Param108",
+			"GroupId": "ParamGroup24",
+			"Name": "L刘海-1-1"
+		},
+		{
+			"Id": "Param109",
+			"GroupId": "ParamGroup24",
+			"Name": "L刘海-1-2"
+		},
+		{
+			"Id": "Param110",
+			"GroupId": "ParamGroup24",
+			"Name": "L刘海-1-3"
+		},
+		{
+			"Id": "Param95",
+			"GroupId": "ParamGroup24",
+			"Name": "R中刘海-1-1"
+		},
+		{
+			"Id": "Param93",
+			"GroupId": "ParamGroup24",
+			"Name": "R中刘海-1-2"
+		},
+		{
+			"Id": "Param94",
+			"GroupId": "ParamGroup24",
+			"Name": "R中刘海-1-3"
+		},
+		{
+			"Id": "Param96",
+			"GroupId": "ParamGroup24",
+			"Name": "L中刘海-1-1"
+		},
+		{
+			"Id": "Param97",
+			"GroupId": "ParamGroup24",
+			"Name": "L中刘海-1-2"
+		},
+		{
+			"Id": "Param98",
+			"GroupId": "ParamGroup24",
+			"Name": "L中刘海-1-3"
+		},
+		{
+			"Id": "ParamLinephy12",
+			"GroupId": "ParamGroup7",
+			"Name": "▄▄▄[EYE]▄▄▄"
+		},
+		{
+			"Id": "ParamphyEyeR15",
+			"GroupId": "ParamGroup7",
+			"Name": "L1"
+		},
+		{
+			"Id": "ParamphyEyeR16",
+			"GroupId": "ParamGroup7",
+			"Name": "L2"
+		},
+		{
+			"Id": "ParamphyEyeR17",
+			"GroupId": "ParamGroup7",
+			"Name": "L3"
+		},
+		{
+			"Id": "ParamphyEyeR12",
+			"GroupId": "ParamGroup7",
+			"Name": "R1"
+		},
+		{
+			"Id": "ParamphyEyeR13",
+			"GroupId": "ParamGroup7",
+			"Name": "R2"
+		},
+		{
+			"Id": "ParamphyEyeR14",
+			"GroupId": "ParamGroup7",
+			"Name": "R3"
+		},
+		{
+			"Id": "ParamphyEyeR6",
+			"GroupId": "ParamGroup7",
+			"Name": "[phy]EyeR-M"
+		},
+		{
+			"Id": "ParamphyEyeR7",
+			"GroupId": "ParamGroup7",
+			"Name": "[phy]EyeL-M"
+		},
+		{
+			"Id": "ParamphyEyeR3",
+			"GroupId": "ParamGroup7",
+			"Name": "[phy]EyeL"
+		},
+		{
+			"Id": "ParamphyEyeR4",
+			"GroupId": "ParamGroup7",
+			"Name": "[phy]EyeL_1"
+		},
+		{
+			"Id": "ParamphyEyeR5",
+			"GroupId": "ParamGroup7",
+			"Name": "[phy]EyeL_2"
+		},
+		{
+			"Id": "ParamphyEyeR",
+			"GroupId": "ParamGroup7",
+			"Name": "[phy]EyeR"
+		},
+		{
+			"Id": "ParamphyEyeR10",
+			"GroupId": "ParamGroup7",
+			"Name": "[phy]HT-L1"
+		},
+		{
+			"Id": "ParamphyEyeR11",
+			"GroupId": "ParamGroup7",
+			"Name": "[phy]HT-L2"
+		},
+		{
+			"Id": "ParamphyEyeR8",
+			"GroupId": "ParamGroup7",
+			"Name": "[phy]HT-R1"
+		},
+		{
+			"Id": "ParamphyEyeR9",
+			"GroupId": "ParamGroup7",
+			"Name": "[phy]HT-R2"
+		},
+		{
+			"Id": "ParamphyEyeR1",
+			"GroupId": "ParamGroup7",
+			"Name": "[phy]EyeR_1"
+		},
+		{
+			"Id": "ParamphyEyeR2",
+			"GroupId": "ParamGroup7",
+			"Name": "[phy]EyeR_2"
+		},
+		{
+			"Id": "ParamLinephy6",
+			"GroupId": "ParamGroup7",
+			"Name": "▄▄▄[头饰]▄▄▄"
+		},
+		{
+			"Id": "Param241",
+			"GroupId": "ParamGroup7",
+			"Name": "蝴蝶结 L1"
+		},
+		{
+			"Id": "Param242",
+			"GroupId": "ParamGroup7",
+			"Name": "蝴蝶结 L2"
+		},
+		{
+			"Id": "Param239",
+			"GroupId": "ParamGroup7",
+			"Name": "蝴蝶结 R1"
+		},
+		{
+			"Id": "Param240",
+			"GroupId": "ParamGroup7",
+			"Name": "蝴蝶结 R2"
+		},
+		{
+			"Id": "Param238",
+			"GroupId": "ParamGroup7",
+			"Name": "蝴蝶流苏 R"
+		},
+		{
+			"Id": "Param234",
+			"GroupId": "ParamGroup7",
+			"Name": "流苏 R2"
+		},
+		{
+			"Id": "Param236",
+			"GroupId": "ParamGroup7",
+			"Name": "流苏 Rx"
+		},
+		{
+			"Id": "Param237",
+			"GroupId": "ParamGroup7",
+			"Name": "流苏 Ry"
+		},
+		{
+			"Id": "Param2",
+			"GroupId": "ParamGroup",
+			"Name": "YL-From"
+		},
+		{
+			"Id": "Param6",
+			"GroupId": "ParamGroup",
+			"Name": "YL-1"
+		},
+		{
+			"Id": "Param7",
+			"GroupId": "ParamGroup",
+			"Name": "YL-2"
+		},
+		{
+			"Id": "Param3",
+			"GroupId": "ParamGroup",
+			"Name": "YR-1"
+		},
+		{
+			"Id": "Param4",
+			"GroupId": "ParamGroup",
+			"Name": "YR-2"
+		},
+		{
+			"Id": "Param5",
+			"GroupId": "ParamGroup",
+			"Name": "YR-From"
+		},
+		{
+			"Id": "ParamLineArmPhy4",
+			"GroupId": "ParamGroup5",
+			"Name": "▄▄▄[Arm]▄▄▄"
+		},
+		{
+			"Id": "Param112",
+			"GroupId": "ParamGroup5",
+			"Name": "Arm-R"
+		},
+		{
+			"Id": "Param215",
+			"GroupId": "ParamGroup5",
+			"Name": "Arm-R2"
+		},
+		{
+			"Id": "Param117",
+			"GroupId": "ParamGroup5",
+			"Name": "Arm-L"
+		},
+		{
+			"Id": "Param230",
+			"GroupId": "ParamGroup5",
+			"Name": "Arm-L2"
+		},
+		{
+			"Id": "ParamLineBody4",
+			"GroupId": "ParamGroup11",
+			"Name": "▄▄▄[★Body]▄▄▄"
+		},
+		{
+			"Id": "ParamBodyAngleX12",
+			"GroupId": "ParamGroup11",
+			"Name": "腿 X"
+		},
+		{
+			"Id": "ParamBodyAngleX2",
+			"GroupId": "ParamGroup11",
+			"Name": "★体转　X"
+		},
+		{
+			"Id": "ParamBodyAngleY2",
+			"GroupId": "ParamGroup11",
+			"Name": "★体转　Y"
+		},
+		{
+			"Id": "ParamBodyAngleZ3",
+			"GroupId": "ParamGroup11",
+			"Name": "★体转　Z1"
+		},
+		{
+			"Id": "ParamPositionY",
+			"GroupId": "ParamGroup11",
+			"Name": "★位置Y"
+		},
+		{
+			"Id": "ParamLineBody3",
+			"GroupId": "ParamGroup12",
+			"Name": "▄▄▄[◆Body]▄▄▄"
+		},
+		{
+			"Id": "ParamBodyAngleX3",
+			"GroupId": "ParamGroup12",
+			"Name": "◆体转 X弹"
+		},
+		{
+			"Id": "ParamBodyAngleY3",
+			"GroupId": "ParamGroup12",
+			"Name": "◆体转 Y弹"
+		},
+		{
+			"Id": "ParamBodyAngleZ5",
+			"GroupId": "ParamGroup12",
+			"Name": "◆体转 Z弹"
+		},
+		{
+			"Id": "ParamPositionZ2",
+			"GroupId": "ParamGroup12",
+			"Name": "◆位置 Z弹"
+		},
+		{
+			"Id": "Param65",
+			"GroupId": "ParamGroup3",
+			"Name": "星星吊坠1"
+		},
+		{
+			"Id": "Param66",
+			"GroupId": "ParamGroup3",
+			"Name": "星星吊坠2"
+		},
+		{
+			"Id": "Param67",
+			"GroupId": "ParamGroup3",
+			"Name": "星星吊坠3"
+		},
+		{
+			"Id": "Param55",
+			"GroupId": "ParamGroup3",
+			"Name": "云朵 21"
+		},
+		{
+			"Id": "Param56",
+			"GroupId": "ParamGroup3",
+			"Name": "云朵 22"
+		},
+		{
+			"Id": "Param49",
+			"GroupId": "ParamGroup3",
+			"Name": "云朵 11"
+		},
+		{
+			"Id": "Param50",
+			"GroupId": "ParamGroup3",
+			"Name": "云朵 12"
+		},
+		{
+			"Id": "Param25",
+			"GroupId": "ParamGroup3",
+			"Name": "月亮 Z"
+		},
+		{
+			"Id": "Param26",
+			"GroupId": "ParamGroup3",
+			"Name": "月亮 X"
+		}
+	],
+	"ParameterGroups": [
+		{
+			"Id": "ParamGroup4",
+			"GroupId": "",
+			"Name": "鼠标XY"
+		},
+		{
+			"Id": "ParamGroup14",
+			"GroupId": "",
+			"Name": "按键"
+		},
+		{
+			"Id": "ParamGroupExpression",
+			"GroupId": "",
+			"Name": "表情 (基本)"
+		},
+		{
+			"Id": "ParamGroup2",
+			"GroupId": "",
+			"Name": "眉毛 (基本)"
+		},
+		{
+			"Id": "ParamGroup24",
+			"GroupId": "",
+			"Name": "头发"
+		},
+		{
+			"Id": "ParamGroup7",
+			"GroupId": "",
+			"Name": "物理"
+		},
+		{
+			"Id": "ParamGroup",
+			"GroupId": "",
+			"Name": "兽耳"
+		},
+		{
+			"Id": "ParamGroup5",
+			"GroupId": "",
+			"Name": "Arm"
+		},
+		{
+			"Id": "ParamGroup11",
+			"GroupId": "",
+			"Name": "★身体角度"
+		},
+		{
+			"Id": "ParamGroup12",
+			"GroupId": "",
+			"Name": "◆身体角度補正"
+		},
+		{
+			"Id": "ParamGroup3",
+			"GroupId": "",
+			"Name": "Ami"
+		}
+	],
+	"Parts": [
+		{
+			"Id": "Part22",
+			"Name": "表情动作"
+		},
+		{
+			"Id": "Part",
+			"Name": "头"
+		},
+		{
+			"Id": "Part11",
+			"Name": "身体"
+		},
+		{
+			"Id": "Part13",
+			"Name": "后发"
+		},
+		{
+			"Id": "Part14",
+			"Name": "兔子"
+		},
+		{
+			"Id": "Part15",
+			"Name": "花"
+		},
+		{
+			"Id": "Part16",
+			"Name": "云"
+		},
+		{
+			"Id": "Part17",
+			"Name": "月亮"
+		},
+		{
+			"Id": "Part18",
+			"Name": "枕头"
+		},
+		{
+			"Id": "Part23",
+			"Name": "哈欠"
+		},
+		{
+			"Id": "Part27",
+			"Name": "摸头  Cho"
+		},
+		{
+			"Id": "Part28",
+			"Name": "打call"
+		},
+		{
+			"Id": "Part29",
+			"Name": "爪爪"
+		},
+		{
+			"Id": "Part30",
+			"Name": "啃肉"
+		},
+		{
+			"Id": "Part32",
+			"Name": "猫猫牌 Cho"
+		},
+		{
+			"Id": "Part33",
+			"Name": "吃泡面 Cho"
+		},
+		{
+			"Id": "Part36",
+			"Name": "星星抱枕"
+		},
+		{
+			"Id": "Part38",
+			"Name": "花环"
+		},
+		{
+			"Id": "Part39",
+			"Name": "啾啾"
+		},
+		{
+			"Id": "Part42",
+			"Name": "表情"
+		},
+		{
+			"Id": "Part2",
+			"Name": "眉毛"
+		},
+		{
+			"Id": "Part3",
+			"Name": "前发"
+		},
+		{
+			"Id": "Part5",
+			"Name": "前发 阴影"
+		},
+		{
+			"Id": "Part6",
+			"Name": "眼睛"
+		},
+		{
+			"Id": "Part9",
+			"Name": "脸"
+		},
+		{
+			"Id": "Part12",
+			"Name": "衣服"
+		},
+		{
+			"Id": "Part21",
+			"Name": "腿 R"
+		},
+		{
+			"Id": "Part72",
+			"Name": "星星挂坠"
+		},
+		{
+			"Id": "Part31",
+			"Name": "手 副本"
+		},
+		{
+			"Id": "Part34",
+			"Name": "1"
+		},
+		{
+			"Id": "Part43",
+			"Name": "汗流浃背 Cho"
+		},
+		{
+			"Id": "Part44",
+			"Name": "wink"
+		},
+		{
+			"Id": "Part45",
+			"Name": "困"
+		},
+		{
+			"Id": "Part47",
+			"Name": "惊讶"
+		},
+		{
+			"Id": "Part48",
+			"Name": "哭哭"
+		},
+		{
+			"Id": "Part51",
+			"Name": "星星眼 Cho"
+		},
+		{
+			"Id": "Part52",
+			"Name": "开心"
+		},
+		{
+			"Id": "Part40",
+			"Name": "星星头"
+		},
+		{
+			"Id": "Part4",
+			"Name": "耳朵"
+		},
+		{
+			"Id": "Part7",
+			"Name": "眼睛 R"
+		},
+		{
+			"Id": "Part8",
+			"Name": "眼睛 L"
+		},
+		{
+			"Id": "Part20",
+			"Name": "red"
+		},
+		{
+			"Id": "Part10",
+			"Name": "嘴"
+		},
+		{
+			"Id": "Part35",
+			"Name": "组 1 副本 2"
+		},
+		{
+			"Id": "Part19",
+			"Name": "泡面手 L"
+		},
+		{
+			"Id": "Part49",
+			"Name": "眼泪2"
+		},
+		{
+			"Id": "Part50",
+			"Name": "眼泪1"
+		},
+		{
+			"Id": "Part41",
+			"Name": "领结"
+		},
+		{
+			"Id": "Part24",
+			"Name": "高光 R"
+		},
+		{
+			"Id": "Part25",
+			"Name": "高光 L"
+		},
+		{
+			"Id": "Part57",
+			"Name": "哈欠嘴"
+		},
+		{
+			"Id": "Part56",
+			"Name": "汗嘴"
+		},
+		{
+			"Id": "Part55",
+			"Name": "困嘴"
+		},
+		{
+			"Id": "Part54",
+			"Name": "星星嘴"
+		},
+		{
+			"Id": "Part53",
+			"Name": "哭嘴"
+		},
+		{
+			"Id": "Part46",
+			"Name": "开心嘴"
+		},
+		{
+			"Id": "Part37",
+			"Name": "泡面嘴"
+		},
+		{
+			"Id": "Part26",
+			"Name": "啃肉嘴"
+		}
+	],
+	"CombinedParameters": [
+		[
+			"Param53",
+			"Param54"
+		],
+		[
+			"ParamEyeForm",
+			"ParamEyeSize"
+		],
+		[
+			"ParamBrowRY",
+			"ParamBrowLY"
+		],
+		[
+			"Param65",
+			"Param66"
+		],
+		[
+			"Param55",
+			"Param56"
+		],
+		[
+			"Param49",
+			"Param50"
+		]
+	]
+}

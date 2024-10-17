@@ -1,0 +1,35 @@
+{
+	"Type": "Live2D Expression",
+	"Parameters": [
+		{
+			"Id": "Kun",
+			"Value": 1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Carrot",
+			"Value": 0,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Shock",
+			"Value": 0,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamEyeROpen",
+			"Value": -1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamEyeLOpen",
+			"Value": -1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamAngleZ",
+			"Value": 15.921,
+			"Blend": "Add"
+		}
+	]
+}

@@ -1,0 +1,97 @@
+{
+  "Type": "Live2D Expression",
+  "FadeInTime": 0.01,
+  "FadeOutTime": 0.01,
+  "Parameters": [
+    {
+      "Id": "Jiujiu",
+      "Value": 0.0,
+      "Blend": "Add"
+    },
+    {
+      "Id": "Flower",
+      "Value": 0.0,
+      "Blend": "Add"
+    },
+    {
+      "Id": "StarHat",
+      "Value": 0.0,
+      "Blend": "Add"
+    },
+    {
+      "Id": "CatCard",
+      "Value": 0.0,
+      "Blend": "Add"
+    },
+    {
+      "Id": "Han",
+      "Value": 0.0,
+      "Blend": "Add"
+    },
+    {
+      "Id": "Lamian",
+      "Value": 0.0,
+      "Blend": "Add"
+    },
+    {
+      "Id": "StarEyes",
+      "Value": 0.0,
+      "Blend": "Add"
+    },
+    {
+      "Id": "Shy",
+      "Value": 0.0,
+      "Blend": "Add"
+    },
+    {
+      "Id": "HaQian",
+      "Value": 0.0,
+      "Blend": "Add"
+    },
+    {
+      "Id": "Momo",
+      "Value": 0.0,
+      "Blend": "Add"
+    },
+    {
+      "Id": "DaCall",
+      "Value": 0.0,
+      "Blend": "Add"
+    },
+    {
+      "Id": "CatPaw",
+      "Value": 0.0,
+      "Blend": "Add"
+    },
+    {
+      "Id": "Pillow",
+      "Value": 0.0,
+      "Blend": "Add"
+    },
+    {
+      "Id": "Kun",
+      "Value": 0.0,
+      "Blend": "Add"
+    },
+    {
+      "Id": "Shock",
+      "Value": 0.0,
+      "Blend": "Add"
+    },
+    {
+      "Id": "Happy",
+      "Value": 0.0,
+      "Blend": "Add"
+    },
+    {
+      "Id": "Cry",
+      "Value": 0.0,
+      "Blend": "Add"
+    },
+    {
+      "Id": "MeatHand",
+      "Value": 0.0,
+      "Blend": "Add"
+    }
+  ]
+}

@@ -158,15 +158,23 @@ OhMyLive2d:
         }   
     models:
       - name: shenxinhui
-        path: /live2d-model/shenxinhui/starDesktop.model3.json
-        position: [0, 30]
-        mobilePosition: [0, 20]
-        mobileScale: 0.07
+        path: live2d-model/shenxinhui/starDesktop.model3.json
+        position: [40, 30]
+        mobilePosition: [20, 10]
+        mobileScale: 0.05
+        stageStyle:
+          right: 40px
+        mobileStageStyle:
+          right: 40px
       - name: lishen
-        path: /live2d-model/Lishen/lishen.model3.json
-        position: [0, 30]
-        mobilePosition: [0, 20]
-        mobileScale: 0.07
+        path: live2d-model/Lishen/lishen.model3.json
+        position: [40, 30]
+        mobilePosition: [20, 10]
+        mobileScale: 0.05
+        stageStyle:
+          right: 40px
+        mobileStageStyle:
+          right: 40px
     tips:
       style:
         width: 230

@@ -43,7 +43,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: "assets/**/*"
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -157,7 +157,7 @@ OhMyLive2d:
         }   
     models:
       - name: shenxinhui
-        path: assets/live2dModel/shenxinhui/starDesktop.model3.json
+        path: https://cdn.jsdelivr.net/gh/yanghuimin321/live2dModels@1.0.1/shenxinhui/StarDesktop.model3.json
         position: [40, 30]
         mobilePosition: [20, 10]
         mobileScale: 0.05
@@ -166,7 +166,7 @@ OhMyLive2d:
         mobileStageStyle:
           right: 40px
       - name: lishen
-        path: assets/live2dModel/Lishen/lishen.model3.json
+        path: https://cdn.jsdelivr.net/gh/yanghuimin321/live2dModels@1.0.1/Lishen/lishen.model3.json
         position: [40, 30]
         mobilePosition: [20, 10]
         mobileScale: 0.05

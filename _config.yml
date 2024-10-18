@@ -141,19 +141,29 @@ OhMyLive2d:
     menus:
       items: |
         (defaultItems)=>{
-         return [
-           defaultItems[0],
-           {
+          return [
+            defaultItems[0],
+            {
               id: 'SwitchExpression',
               icon: 'icon-like',
               title: '切换表情',
               onClick: (oml2d)=>{
-                oml2d['models'].model.internalModel.motionManager.expressionManager.setRandomExpression();
+                Pace.ignore(()=> oml2d['models'].model.internalModel.motionManager.expressionManager.setRandomExpression());
               }
-           },
-           defaultItems[1],
-           defaultItems[2]
-         ]
+            },
+            {
+              ...defaultItems[1],
+              onClick: (oml2d)=>{
+                Pace.ignore(()=> oml2d.loadNextModelClothes());
+              }
+            },
+            {
+              ...defaultItems[2],
+              onClick: (oml2d)=>{
+                Pace.ignore(()=> oml2d.loadNextModel());
+              }
+            }
+          ]
         }   
     models:
       - name: shenxinhui

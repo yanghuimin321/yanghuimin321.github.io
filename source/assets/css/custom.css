@@ -1,3 +1,39 @@
+/* 亮色模式下隐藏 */
+[data-theme='light'] #universe {
+	display: none;
+}
+/* 暗色模式下隐藏 */
+[data-theme='dark'] #canvas_sakura {
+	display: none;
+}
+/* 亮色色模式下显示 */
+[data-theme='light'] #canvas_sakura {
+	display: inline;
+}
+
+
+/* 这里是设置一个全局透明度，不然不太协调，可以根据自己的喜好修改 */
+:root {
+	--card-bg: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme=dark] 
+body {
+	--card-bg: rgba(18, 18, 18, 0.7);
+}
+
+
+/* 日间模式背景 */
+#web_bg {
+	background: url('../images/bg_pic_light.jpg');
+	background-size: cover;
+}
+/* 夜间模式背景 */
+[data-theme='dark'] #web_bg {
+	background: url('../images/bg_pic_dark.jpg');
+	background-size: cover;
+}
+
 /***毛玻璃***************************************************/
 /*顶部栏*/
 #page-header.nav-fixed #nav{
@@ -67,32 +103,5 @@
 	background:rgba(252, 224, 252, 0.2) !important;
 	backdrop-filter: blur(3px);
 	border-radius: 6px 6px;
-}
-/*******************************************************/
-
-
-/***页脚全透明***************************************************/
-#footer {
-  background: transparent !important; /*全透明，已选用*/
-}
-
-/* 半透明以及透明色，未选用，
-#footer {
-  background: rgba(255,255,255,.15);
-  color: #000;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
-  backdrop-filter: saturate(100%) blur(5px)
-}
-#footer::before {
-  background: rgba(255,255,255,.15)
-}
-*/
-#footer #footer-wrap {
-  color: var(--font-color);
-}
-
-#footer #footer-wrap a {
-  color: var(--font-color);
 }
 /*******************************************************/

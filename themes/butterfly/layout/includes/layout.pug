@@ -19,7 +19,9 @@ html(lang=config.language data-theme=theme.display_mode class=htmlClassHideAside
     #body-wrap(class=pageType)
       include ./header/index.pug
 
-      main#content-inner.layout(class=hideAside)
+      //- main#content-inner.layout(class=hideAside)
+      //- 修改主体部分的z-index，防止被樱花特效覆盖
+      main#content-inner.layout(class=hideAside style='z-index:2')
         if body
           div!= body
         else

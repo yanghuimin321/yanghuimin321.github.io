@@ -1,6 +1,6 @@
 ---
 title: 魔改butterfly主题记录
-typora-root-url: ./魔改butterfly主题记录
+typora-root-url: ./butterfly主题魔改记录
 abbrlink: aa63d414
 date: 2024-10-20 16:37:33
 tags:
@@ -737,7 +737,7 @@ else if is_home()
 
 ## 7.2 效果预览
 
-![1729261242494](./../butterfly%E4%B8%BB%E9%A2%98%E9%AD%94%E6%94%B9%E8%AE%B0%E5%BD%95/1729261242494.png)
+![1729261242494_2](./1729261242494_2.png)
 
 # 8. 添加日夜模式切换更换樱花飘落和星空的效果
 

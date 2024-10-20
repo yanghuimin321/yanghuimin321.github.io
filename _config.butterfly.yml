@@ -141,7 +141,7 @@ post_meta:
     label: true
   post:
     # Choose: left / center
-    position: left
+    position: center
     # Choose: created / updated / both
     date_type: both
     # Choose: date / relative
@@ -778,7 +778,7 @@ theme_color:
   text_selection: "rgba(255,133,140, 1)"
   link_color: "#007fff"
   # meta_color: "#252933"
-  hr_color: "rgba(120,76,89, 1)"
+  hr_color: "rgba(255,133,140, 1)"
 #   code_foreground: "#F47466"
 #   code_background: "rgba(27, 31, 35, .05)"
   toc_color: "rgba(255,133,140, 1)"
@@ -839,10 +839,10 @@ beautify:
 # Global font settings
 # Don't modify the following settings unless you know how they work
 font:
-  global_font_size:
-  code_font_size:
-  font_family:
-  code_font_family:
+  global_font_size: 16px
+  code_font_size: 13px
+  font_family: LXGW WenKai Screen, serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Lato, Roboto, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif, Merriweather
+  code_font_family: consolas, Menlo, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif
 
 # Font settings for the site title and site subtitle
 blog_title_font:
@@ -997,8 +997,8 @@ snackbar:
   enable: true
   position: top-center
   # The background color of Toast Notification in light mode and dark mode
-  bg_light: '#49b1f5'
-  bg_dark: '#1f1f1f'
+  bg_light: 'rgba(255,133,140, 1)'
+  bg_dark: '#2d3035'
 
 # Instant.page
 # https://instant.page/
@@ -1053,8 +1053,10 @@ inject:
   head:
     # 波浪效果
     - <link rel="stylesheet" href="/assets/css/waves_area.css">
-    # 毛玻璃特效
+    # 归纳css
     - <link rel="stylesheet" href="/assets/css/custom.css">
+    # 字体
+    - <link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.7.0/style.css" media="print" onload="this.media='all'">
   bottom:
     # 音乐播放器
     - <div class="aplayer no-destroy" data-id="12732580711" data-server="netease" data-type="playlist" data-fixed="true" data-theme="#3F51B5"> </div>

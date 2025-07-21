@@ -1147,3 +1147,569 @@ abbrlink: 89ee5ef9
      - 不能将变量值作为样式属性值的一部分， **可以用calc函数来计算CSS样式属性值** ，如：margin-top:  calc(var(--gap) * 1px);
    - 运行时获取CSS变量值： **getComputedStyle(document.documentElement).getPropertyValue(变量名)** 
    - 运行时设置CSS变量值： **document.documentElement.style.setProperty(变量名, 值)** 
+
+# 十三、实例
+
+1.  **html**文件：
+
+   ```html
+   <!DOCTYPE html>
+   <html>
+     <head>
+       <meta charset="utf-8">
+       <title>订单信息</title>
+       <link href="mainstyle.css" rel="stylesheet" type="text/css" />
+       <script src="script.js" type="text/javascript"></script>
+     </head>
+     <body onload="window_onload()">
+       <section>
+         <header id="div_head_title_big">
+           <h1>编辑订单信息</h1>
+         </header>
+   
+         <form id="form1">
+           <ul>
+             <li>
+               <ul id="row_1">
+                 <li id="title_1">
+                   <span>*</span><label for="tbxCode">订&nbsp;单&nbsp;编号</label>
+                 </li>
+                 <li id="content_1">
+                   <input type="text" id="tbxCode" name="tbxCode" maxlength="8" placeholder="必须输入一个不存在的订单编号" autofocus required />
+                 </li>
+   
+                 <li id="title_2">
+                   <span>*</span><label for="tbxDate">订&nbsp;单日期</label>
+                 </li>
+                 <li id="content_2">
+                   <input type="date" id="tbxDate" name="tbxDate" maxlength="10" required />
+                 </li>
+   
+                 <li id="title_3">
+                   <span>*</span><label for="tbxGoodsCode">商&nbsp;品编号</label>
+                 </li>
+                 <li id="content_3">
+                   <input type="text" id="tbxGoodsCode" name="tbxGoodsCode" maxlength="12" placeholder="必须输入商品编号" required />
+                 </li>
+               </ul>
+             </li>
+   
+             <li>
+               <ul id="row_2">
+                 <li id="title_4">
+                   <label for="tbxBrandName">商&nbsp;&nbsp;&nbsp;&nbsp;标</label>
+                 </li>
+                 <li id="content_4">
+                   <input type="text" id="tbxBrandName" name="tbxBrandName" maxlength="50" />
+                 </li>
+   
+                 <li id="title_5">
+                   <label for="tbxNum">数&nbsp;&nbsp;&nbsp;量</label>
+                 </li>
+                 <li id="content_5">
+                   <input type="number" id="tbxNum" name="tbxNum" maxlength="6" value="0" placeholder="必须输入一个整数值" required onblur="tbxNumPrice_onblur()" />
+                 </li>
+   
+                 <li id="title_6">
+                   <label for="tbxPrice">单&nbsp;&nbsp;&nbsp;价</label>
+                 </li>
+                 <li id="content_6">
+                   <input type="text" id="tbxPrice" name="tbxPrice" maxlength="6" value="0" placeholder="必须输入一个有效的单价" required onblur="tbxNumPrice_onblur()" />
+                 </li>
+               </ul>
+             </li>
+   
+             <li>
+               <ul id="row_3">
+                 <li id="title_7">
+                   <label for="tbxMoney">金&nbsp;&nbsp;&nbsp;&nbsp;额</label>
+                 </li>
+                 <li id="content_7">
+                   <input type="text" id="tbxMoney" name="tbxMoney" readonly value="0" />
+                 </li>
+   
+                 <li id="title_8">
+                   <label for="tbxPersonName">负&nbsp;责&nbsp;人</label>
+                 </li>
+                 <li id="content_8">
+                   <input type="text" id="tbxPersonName" name="tbxPersonName" maxlength="20" />
+                 </li>
+   
+                 <li id="title_9">
+                   <label for="tbxEmail">负责人Email</label>
+                 </li>
+                 <li id="content_9">
+                   <input type="email" id="tbxEmail" name="tbxEmail" maxlength="20" placeholder="请输入一个有效的邮件地址" />
+                 </li>
+               </ul>
+             </li>
+           </ul>
+   
+           <div id="buttonDiv">
+             <input type="button" name="btnNew" id="btnNew" value="新增" onclick="btnNew_onclick()" />
+             <input type="submit" name="btnAdd" id="btnAdd" value="追加" onclick="btnAdd_onclick()" />
+             <input type="submit" name="btnUpdate" id="btnUpdate" value="修改" onclick="btnUpdate_onclick()" />
+             <input type="button" name="btnDelete" id="btnDelete" value="删除" onclick="btnDelete_onclick()" />
+             <input type="button" name="btnClear" id="btnClear" value="清除" onclick="btnClear_onclick()" />
+             <!-- <input type="button" name="btnSubmit" id="btnSubmit" value="提交" onclick="btnSubmit_onclick()" /> -->
+             <input type="button" name="btnSaveCurrent" id="btnSaveCurrent" value="保存当前输入" onclick="btnSaveCurrent_onclick()" />
+           </div>
+         </form>
+       </section>
+   
+       <section>
+         <header id="div_head_title_big">
+           <h1>订单信息一览表</h1>
+         </header>
+   
+         <div id="infoTable">
+           <table id="datatable">
+             <tr>
+               <th>订单编号</th>
+               <th>订单日期</th>
+               <th>商品编号</th>
+               <th>商标</th>
+               <th>数量</th>
+               <th>单价</th>
+               <th>金额</th>
+               <th>负责人</th>
+               <th>负责人Email</th>
+             </tr>
+           </table>
+         </div>
+       </section>
+     </body>
+   </html>
+   ```
+
+2.  **mainstyle.css** 文件
+
+   ```css
+   body{
+     margin-left: 0px;
+     margin-top: 0px;
+   }
+   
+   ul[id^=row]{
+     width: 100%;
+     display: grid;
+     grid-template-columns: repeat(3, 1fr 2fr);
+     margin: 0;
+     padding: 0;
+   }
+   
+   li{
+     list-style: none;
+   }
+   
+   h1{
+     font-size: 14px;
+     font-weight: bold;
+     color: white;
+     background-color: #7088ad;
+     text-align: left;
+     padding-left: 10px;
+     display: block;
+     width: 99%;
+     margin: 0px;
+   }
+   
+   li[id^=title]{
+     font-size: 12px;
+     color: #333;
+     background-color: #e6e6e6;
+     text-align: right;
+     padding-right: 5px;
+   }
+   
+   li[id^=content]{
+     height: 22;
+     background-color: #fafafa;
+     text-align: left;
+     padding-left: 2px;
+   }
+   
+   span{
+     color: #ff0000;
+   }
+   
+   input{
+     width: 95%;
+     border: 1px solid #426C7C;
+     height: 18px;
+   }
+   
+   input:read-only{
+     background-color: yellow;
+   }
+   
+   input#tbxNum, input#tbxPrice, input#tbxMoney{
+     text-align: right;
+   }
+   
+   div{
+     text-align: right;
+   }
+   
+   div#buttonDiv{
+     width: 100%;
+   }
+   
+   input[type="button"], input[type="submit"]{
+     font-size: 12px;
+     width: 68px;
+     height: 20px;
+     cursor: hand;
+     border: none;
+     font-family: 宋体;
+     color: #333;
+     background-color: #e6e6e6;
+   }
+   
+   input[type="button"]#btnSaveCurrent{
+     width: 100px;
+   }
+   
+   div#infoTable{
+     overflow: auto;
+     width: 100%;
+     height: 100%;
+   }
+   
+   div#infoTable table{
+     width: 100%;
+     background-color: white;
+     font-size: 12px;
+     text-align: center;
+   }
+   
+   div#infoTable table th{
+     height: 30;
+   }
+   
+   div#infoTable table th:nth-child(odd){
+     background-color: #e6e6e6;
+     color: #333;
+   }
+   
+   div#infoTable table th:nth-child(even){
+     background-color: #fafafa;
+     color: black;
+   }
+   
+   div#infoTable table tr:nth-child(1){
+     background-color: #7088ad;
+     color: #FFFFFF;
+   }
+   ```
+
+3.  **script.js** 文件：
+
+   ```js
+   const dbName='MyData';//数据库名
+   const dbVersion = 20250721;//版本号
+   
+   let idb, datatable;
+   const form_attr = ['tbxCode', 'tbxDate', 'tbxGoodsCode', 'tbxBrandName', 'tbxNum', 'tbxPrice', 'tbxMoney', 'tbxPersonName', 'tbxEmail'];
+   const form_name = ['订单编号', '订单日期', '商品编号', '商标', '数量', '单价', '金额', '负责人', 'Email'];
+   
+   // 连接本地数据库成功时，如果没有数据，从good.json文件中获取数据写入数据库
+   function readDataFromJServer(){
+     fetch("goods.json").then(function(response){
+       if(response.status != 200){
+         alert("读取商品信息时发生网络错误");
+         return;
+       }
+       response.json().then(function(data){
+         let tx = idb.transaction(['orders'], "readwrite");
+         tx.oncomplete = function(){showAllData(true)}
+         tx.onabort = function(){alert("追加数据失败")}
+         let store = tx.objectStore('orders');
+         for(let c of data) store.put(c);
+       });
+     }).catch(function(err){
+       alert("读取商品信息时发生网络错误：" + err.message);
+     });
+   }
+   // 获取本地localStorage数据填入表单中
+   function readFormLocalStorage(data){
+     const form = document.getElementById("form1");
+     for(const [name, value] of Object.entries(data)){
+       const element = form.elements[name];
+       element.value = value;
+     }
+   }
+   
+   // 从页面表中移除所有数据
+   function removeAllData(){
+     for(let i=datatable.childNodes.length-1; i>1; i--){
+       datatable.removeChild(datatable.childNodes[i]);
+     }
+   }
+   // 将订单信息显示在页面表中
+   function showData(row, i){
+     let tr = document.createElement("tr");
+     tr.setAttribute("onclick", "tr_onclick(this,"+i+")");
+     for(let index = 0; index < 9; index++){
+       let td = document.createElement("td");
+       td.innerHTML = row[form_attr[index]];
+       tr.appendChild(td);
+     }
+     datatable.appendChild(tr);
+   }
+   
+   // 显示全部订单信息
+   // loadPage: 是否是在页面打开时调用
+   function showAllData(loadPage){
+     if(!loadPage) removeAllData();
+     let tx = idb.transaction(['orders'], "readonly");
+     let store = tx.objectStore('orders');
+     // 获取对象仓库orders中所有数据
+     let req = store.getAll();
+     let index = 0;
+     req.onsuccess = function(){
+       for(let item of this.result) showData(item, ++index);
+     }
+     req.onerror = function(){
+       alert("检索数据失败");
+     }
+   }
+   
+   function window_onload(){
+     datatable = document.getElementById("datatable");
+     //连接数据库
+     let dbConnect = indexedDB.open(dbName, dbVersion);
+     //连接成功
+     dbConnect.onsuccess = function(e){
+       //获取数据库
+       idb = e.target.result;
+       alert("数据库连接成功");
+       let tx = idb.transaction(['orders'], "readonly");
+       let store = tx.objectStore('orders');
+       // 获取order对象仓库数据统计条数
+       let req = store.count();
+       req.onsuccess = function(){
+         if(this.result == 0)
+           readDataFromJServer();
+         else
+           showAllData(true);
+       }
+     }
+     // 连接失败
+     dbConnect.onerror = function(){
+       alert("数据库连接失败");
+     }
+     // 数据库更新
+     dbConnect.onupgradeneeded = function(e){
+       idb = e.target.result;
+       // 创建对象仓库orders
+       if(!idb.objectStoreNames.contains('orders')){
+         let tx = e.target.transaction;
+   
+         tx.oncomplete = function(){
+           showAllData(true);
+         }
+         tx.onabort = function(e){
+           alert("对象仓库创建失败");
+         }
+   
+         let store = idb.createObjectStore('orders', {
+           keyPath: 'id',
+           autoIncrement: true
+         });
+         alert('对象仓库创建成功');
+   
+         let idx = store.createIndex('codeIndex', 'tbxCode', {
+           unique: true,
+           multiEntry: false
+         });
+         alert('索引创建成功');
+       }
+     }
+   
+     if(localStorage.currenData){
+       readFormLocalStorage(JSON.parse(localStorage.currenData));
+     }
+   }
+   
+   
+   function tbxNumPrice_onblur(elem){
+     const count = parseInt(document.getElementById("tbxNum").value);
+     const price = parseFloat(document.getElementById("tbxPrice").value);
+     if(isNaN(count*price)){
+       elem.value = "0";
+       document.getElementById("tbxMoney").value = "0";
+     }else{
+       document.getElementById("tbxMoney").value = count*price;
+     }
+   }
+   
+   
+   function btnNew_onclick(){
+     document.getElementById("form1").reset();
+     document.getElementById("tbxCode").removeAttribute("readonly");
+     document.getElementById("btnAdd").disabled = "";
+     document.getElementById("btnUpdate").disabled = "disabled";
+     document.getElementById("btnDelete").disabled = "disabled";
+   }
+   function btnAdd_onclick(){
+     // 获取表单数据
+     const form = document.getElementById("form1");
+     const formData = new FormData(form);
+     let data = {};
+     for(let [key, value] of formData.entries()){
+       data[key] = value;
+     }
+   
+     let tx = idb.transaction(['orders'], "readwrite");
+     let checkErrorMsg = "";
+     tx.oncomplete = function(){
+       if(checkErrorMsg != "")
+         alert(checkErrorMsg);
+       else{
+         alert("追加数据成功");
+         showAllData(false);
+         btnNew_onclick();
+       }
+     }
+     tx.onabort = function(){alert("追加数据失败");}
+   
+   
+     let store = tx.objectStore('orders');
+     let idx = store.index('codeIndex');
+     let req = idx.count(data.tbxCode);
+     req.onsuccess = function(){
+       if(this.result > 0)
+         checkErrorMsg = "输入的订单编号在数据库中已存在";
+       else
+         store.put(data);
+     }
+     req.onerror = function(){alert("追加数据失败");}
+   }
+   function btnUpdate_onclick(){
+     // 获取表单数据
+     const form = document.getElementById("form1");
+     const formData = new FormData(form);
+     let data = {};
+     for(let [key, value] of formData.entries()){
+       data[key] = value;
+     }
+   
+     let tx = idb.transaction(['orders'], "readwrite");
+     tx.oncomplete = function(){
+       alert("修改数据成功")
+       showAllData(false);
+     }
+     tx.onabort = function(){alert("修改数据失败")}
+   
+     let store = tx.objectStore('orders');
+     let idx = store.index('codeIndex');
+     let req = idx.openCursor(IDBKeyRange.only(data.tbxCode), "next");
+     req.onsuccess = function(){
+       if(this.result){
+         data.id = this.result.value.id;
+         this.result.update(data);
+       }
+     }
+     req.onerror = function(){alert("修改数据失败")}
+   }
+   function btnDelete_onclick(){
+     let tx = idb.transaction(['orders'], "readwrite");
+     tx.oncomplete = function(){
+       alert("删除数据成功")
+       showAllData(false);
+       btnNew_onclick();
+     }
+     tx.onabort = function(){alert("删除数据失败")}
+   
+     let store = tx.objectStore('orders');
+     let idx = store.index('codeIndex');
+     let req = idx.openCursor(IDBKeyRange.only(document.getElementById("tbxCode").value), "next");
+     req.onsuccess = function(){
+       if(this.result){
+         this.result.delete();
+       }
+     }
+     req.onerror = function(){alert("删除数据失败")}
+   }
+   function btnClear_onclick(){
+     for(let i=0; i<9; i++){
+       if(form_attr[i] in ["tbxNum", "tbxPrice", "tbxMoney"])
+         document.getElementById(form_attr[i]).value = "0";
+       else
+         document.getElementById(form_attr[i]).value = "";
+     }
+   }
+   function btnSubmit_onclick(){
+     let tx = idb.transaction(['orders'], "readwrite");
+     let store = tx.objectStore('orders');
+     let req = store.getAll();
+     req.onsuccess = function(){
+       fetch('/test.php',{
+         method: "post",
+         headers:{
+           'Content-Type': 'application/json'
+         },
+         body: JSON.stringify(this.result)
+       })
+       .then(response => response.json())
+       .catch(error => console.error('Error:', error))
+       .then(response =>{
+         let str = "您提交的商品为：\n";
+         for(let good of response){
+           for(let i=0; i<9; i++){
+             str += form_name[i] + good[form_attr[i]] + "\n";
+           }
+         }
+         console.log(str);
+       });
+     }
+     req.onerror = function(){
+       alert('检索数据失败');
+     }
+   }
+   function btnSaveCurrent_onclick(){
+     // 获取表单数据
+     const form = document.getElementById("form1");
+     const formData = new FormData(form);
+     let data = {};
+     for(let [key, value] of formData.entries()){
+       data[key] = value;
+     }
+   
+     localStorage.currenData = JSON.stringify(data);
+   }
+   
+   
+   function tr_onclick(tr, i){
+     for(let i=0; i<9; i++){
+       document.getElementById(form_attr[i]).value = tr.children.item(i).innerHTML;
+     }
+     document.getElementById("tbxCode").setAttribute("readonly", true);
+     document.getElementById("btnAdd").disabled = "disabled";
+     document.getElementById("btnUpdate").disabled = "";
+     document.getElementById("btnDelete").disabled = "";
+   }
+   ```
+
+4.  **goods.json** 文件：
+
+   ```json
+   [
+     {
+       "tbxCode": "123",
+       "tbxDate": "2025-07-22", 
+       "tbxGoodsCode": "666", 
+       "tbxBrandName": "驰名商标", 
+       "tbxNum": "10", 
+       "tbxPrice": "50", 
+       "tbxMoney": "500", 
+       "tbxPersonName": "负责人1号", 
+       "tbxEmail": "123456@qq.com"
+     }
+   ]
+   ```
+
+5. 使用**VSCode的Liver Server插件**（避免浏览器因 `file://` 协议限制导致的跨域问题）查看，效果图如下：
+
+   ![实例显示效果图](./image-20250722025519583.png)

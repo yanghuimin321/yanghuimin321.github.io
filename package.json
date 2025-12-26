@@ -10,7 +10,7 @@
     "start": "hexo clean && hexo generate && hexo server"
   },
   "hexo": {
-    "version": "7.3.0"
+    "version": "8.1.1"
   },
   "dependencies": {
     "hexo": "^8.1.1",
@@ -28,7 +28,9 @@
     "hexo-server": "^3.0.0",
     "hexo-tag-aplayer": "^3.0.4",
     "hexo-theme-landscape": "^1.1.0",
-    "hexo-wordcount": "^6.0.1",
+    "hexo-wordcount": "^6.0.1"
+  },
+  "overrides": {
     "strip-ansi": "6.0.1"
   }
 }

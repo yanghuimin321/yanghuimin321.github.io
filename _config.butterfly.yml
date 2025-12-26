@@ -1004,13 +1004,6 @@ snackbar:
 # https://instant.page/
 instantpage: false
 
-# Pangu - Insert a space between Chinese character and English character
-# https://github.com/vinta/pangu.js
-pangu:
-  enable: true
-  # Specify the field to use pangu (site or post)
-  field: site
-
 # Lazyload
 # https://github.com/verlok/vanilla-lazyload
 lazyload:

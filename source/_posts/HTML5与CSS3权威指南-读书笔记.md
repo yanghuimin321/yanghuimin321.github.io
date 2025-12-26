@@ -911,7 +911,7 @@ abbrlink: 89ee5ef9
 
    - box-sizing属性值：
      - content-box
-     - padding-box(content+padding宽高)
+     - ~~padding-box(content+padding宽高)~~（曾经在 CSS 规范的早期草案中存在过，但最终被移除了，没有被纳入正式标准）
      - border-box(content+padding+border宽高)
 
 ## 5. 背景与边框相关样式

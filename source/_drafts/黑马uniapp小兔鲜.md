@@ -22,3 +22,7 @@ date:
    3. husky配置
 6. 手机安全区域：可以通过uni.getSystemInfoSync() 获取屏幕边界到安全区的距离
 7. 有page{}的样式，但是如果设置style的scoped就会导致组件/页面内的page样式不生效，所以只能配置在app.vue作为全局样式，或者为每个页面增加一个view.page-wrap层
+8. 不同平台的登录方式，针对不同平台写不同逻辑
+9. 封装组合式函数复用逻辑（我的->猜你喜欢）
+10. 小程序 分包概念，配置预下载
+11. :host 是 Shadow DOM 的选择器，用来选 Shadow Root 的宿主元素,是给 Web Components 用的（:host 只在 Shadow DOM 里有效，Vue 和 React 默认不开启 Shadow DOM。）

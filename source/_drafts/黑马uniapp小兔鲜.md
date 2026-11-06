@@ -26,3 +26,4 @@ date:
 9. 封装组合式函数复用逻辑（我的->猜你喜欢）
 10. 小程序 分包概念，配置预下载
 11. :host 是 Shadow DOM 的选择器，用来选 Shadow Root 的宿主元素,是给 Web Components 用的（:host 只在 Shadow DOM 里有效，Vue 和 React 默认不开启 Shadow DOM。）
+12. 微信小程序和h5的组件渲染不一样，微信小程序会在子组件内容外额外多包一层容器元素
